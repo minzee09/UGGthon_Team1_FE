@@ -12,28 +12,44 @@ interface ImageData {
 // 시나리오별 이미지 데이터
 const scenarioImages: Record<string, Array<ImageData>> = {
   결혼식: [
-    { id: 1, src: '/assets/images/theme-1.png', alt: '결혼식 이미지 1' },
-    { id: 2, src: '/assets/images/theme-1.png', alt: '결혼식 이미지 2' },
-    { id: 3, src: '/assets/images/theme-1.png', alt: '결혼식 이미지 3' },
-    { id: 4, src: '/assets/images/theme-1.png', alt: '결혼식 이미지 4' },
+    { id: 1, src: '/assets/images/wedding-1.jpeg', alt: '결혼식 이미지 1' },
+    { id: 2, src: '/assets/images/wedding-2.png', alt: '결혼식 이미지 2' },
+    { id: 3, src: '/assets/images/wedding-3.jpeg', alt: '결혼식 이미지 3' },
+    { id: 4, src: '/assets/images/wedding-4.jpg', alt: '결혼식 이미지 4' },
   ],
   크리스마스: [
-    { id: 1, src: '/assets/images/theme-1.png', alt: '크리스마스 이미지 1' },
-    { id: 2, src: '/assets/images/theme-1.png', alt: '크리스마스 이미지 2' },
-    { id: 3, src: '/assets/images/theme-1.png', alt: '크리스마스 이미지 3' },
-    { id: 4, src: '/assets/images/theme-1.png', alt: '크리스마스 이미지 4' },
+    {
+      id: 1,
+      src: '/assets/images/christmas-1.png',
+      alt: '크리스마스 이미지 1',
+    },
+    {
+      id: 2,
+      src: '/assets/images/christmas-2.png',
+      alt: '크리스마스 이미지 2',
+    },
+    {
+      id: 3,
+      src: '/assets/images/christmas-3.png',
+      alt: '크리스마스 이미지 3',
+    },
+    {
+      id: 4,
+      src: '/assets/images/christmas-4.png',
+      alt: '크리스마스 이미지 4',
+    },
   ],
   생일: [
-    { id: 1, src: '/assets/images/theme-1.png', alt: '생일 이미지 1' },
-    { id: 2, src: '/assets/images/theme-1.png', alt: '생일 이미지 2' },
-    { id: 3, src: '/assets/images/theme-1.png', alt: '생일 이미지 3' },
-    { id: 4, src: '/assets/images/theme-1.png', alt: '생일 이미지 4' },
+    { id: 1, src: '/assets/images/birthday-1.jpg', alt: '생일 이미지 1' },
+    { id: 2, src: '/assets/images/birthday-2.jpeg', alt: '생일 이미지 2' },
+    { id: 3, src: '/assets/images/birthday-3.png', alt: '생일 이미지 3' },
+    { id: 4, src: '/assets/images/birthday-4.jpg', alt: '생일 이미지 4' },
   ],
   면접: [
-    { id: 1, src: '/assets/images/theme-1.png', alt: '면접 이미지 1' },
-    { id: 2, src: '/assets/images/theme-1.png', alt: '면접 이미지 2' },
-    { id: 3, src: '/assets/images/theme-1.png', alt: '면접 이미지 3' },
-    { id: 4, src: '/assets/images/theme-1.png', alt: '면접 이미지 4' },
+    { id: 1, src: '/assets/images/interview-1.jpeg', alt: '면접 이미지 1' },
+    { id: 2, src: '/assets/images/interview-2.jpeg', alt: '면접 이미지 2' },
+    { id: 3, src: '/assets/images/interview-3.jpeg', alt: '면접 이미지 3' },
+    { id: 4, src: '/assets/images/interview-4.jpeg', alt: '면접 이미지 4' },
   ],
 };
 
