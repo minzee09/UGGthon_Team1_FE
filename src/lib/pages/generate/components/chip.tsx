@@ -56,7 +56,7 @@ export const Step1ChipGroup: React.FC = () => {
   };
 
   return (
-    <Box p={4}>
+    <Box px={4}>
       <Grid
         templateColumns="repeat(2, 1fr)"
         gap={4}

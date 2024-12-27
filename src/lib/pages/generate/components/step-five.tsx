@@ -1,13 +1,10 @@
 import { FadeInUp } from '@/components/animation/fade-in-up';
-import { TextAnimation } from '@/components/animation/text-animation';
 import { AbsoluteField } from '@/components/ui/absolute-field';
-import { useScenarioStore } from '@/lib/store/scenario-store';
 import {
   Box,
   Button,
   FileUploadRoot,
   FileUploadTrigger,
-  Heading,
   IconButton,
   Image,
   SimpleGrid,
@@ -20,18 +17,12 @@ import { useNavigate } from 'react-router';
 import { Fragment } from 'react/jsx-runtime';
 
 export const Step5 = () => {
-  const { scenario1 } = useScenarioStore();
   const navigate = useNavigate();
   const handleMoveToGenerate = () => navigate('/generate?step=6');
 
   return (
     <Fragment>
       <Stack>
-        <TextAnimation>
-          <Heading size="2xl" fontWeight="extrabold" whiteSpace="pre-line">
-            {`${scenario1} \n 알맞은 옷 사진을 업로드해주세요.`}
-          </Heading>
-        </TextAnimation>
         <FadeInUp>
           <FileUploadButton />
         </FadeInUp>

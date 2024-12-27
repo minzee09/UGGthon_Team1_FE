@@ -1,7 +1,6 @@
 import { FadeInUp } from '@/components/animation/fade-in-up';
-import { TextAnimation } from '@/components/animation/text-animation';
 import { AbsoluteField } from '@/components/ui/absolute-field';
-import { Button, Heading, Stack } from '@chakra-ui/react';
+import { Button, Stack } from '@chakra-ui/react';
 import { useNavigate } from 'react-router';
 import { Fragment } from 'react/jsx-runtime';
 import { Step2ChipGroup } from './chip';
@@ -13,15 +12,6 @@ export const Step2 = () => {
   return (
     <Fragment>
       <Stack>
-        <TextAnimation>
-          <Heading size="2xl" fontWeight="extrabold">
-            평소에는 어떤 스타일의 옷을 입으시나요?
-          </Heading>
-          {/* Subheading */}
-          <Heading size="xl" fontWeight="semibold" color="#898989">
-            (중복 선택 가능)
-          </Heading>
-        </TextAnimation>
         <FadeInUp>
           <Step2ChipGroup />
         </FadeInUp>

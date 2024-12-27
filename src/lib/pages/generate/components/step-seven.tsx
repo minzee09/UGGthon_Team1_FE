@@ -1,5 +1,4 @@
 import { FadeInUp } from '@/components/animation/fade-in-up';
-import { TextAnimation } from '@/components/animation/text-animation';
 import { AbsoluteField } from '@/components/ui/absolute-field';
 import {
   Box,
@@ -52,11 +51,6 @@ export const Step7 = () => {
   return (
     <Fragment>
       <Stack justifyContent="space-between" paddingBottom="80px">
-        <TextAnimation>
-          <Heading size="2xl" fontWeight="extrabold" whiteSpace="pre-line">
-            어울리는 조합을 추천할게요!
-          </Heading>
-        </TextAnimation>
         <FadeInUp>
           <VStack gap={8} align="stretch">
             {outfitCombinations.map((combination, index) => (
