@@ -3,6 +3,7 @@ import { AbsoluteField } from '@/components/ui/absolute-field';
 import { View } from '@/components/ui/view';
 import { Button, Heading, Stack } from '@chakra-ui/react';
 import { useNavigate } from 'react-router';
+import { LogoImage } from './components/logo-image';
 import { SomeImage } from './components/some-image';
 
 const Home = () => {
@@ -12,14 +13,15 @@ const Home = () => {
 
   return (
     <View padding={4}>
-      <Stack height="100%" justifyContent="space-between">
+      <LogoImage />
+      <Stack height="100%">
         <TextAnimation>
-          <Heading size="2xl" fontWeight="extrabold">
-            서비스에 오신 걸 환영해요.
+          <Heading size="2xl" fontWeight="extrabold" whiteSpace="pre-line">
+            환영합니다!{'\n'}내가 가진 옷으로 무드에 맞는{'\n'}코디를 제공 받아
+            보세요.
           </Heading>
         </TextAnimation>
         <SomeImage />
-        <div />
       </Stack>
       <AbsoluteField>
         <Button
