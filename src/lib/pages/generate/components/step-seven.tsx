@@ -14,7 +14,7 @@ import { Fragment } from 'react/jsx-runtime';
 
 export const Step7 = () => {
   const navigate = useNavigate();
-  const handleMoveToGenerate = () => navigate('/generate?step=4');
+  const handleMoveToGenerate = () => navigate('/');
   const outfitCombinations: Array<OutfitCombination> = [
     {
       id: 1,
@@ -71,7 +71,7 @@ export const Step7 = () => {
           fontWeight="semibold"
           onClick={handleMoveToGenerate}
         >
-          좋아요
+          홈으로
         </Button>
       </AbsoluteField>
     </Fragment>

@@ -12,6 +12,7 @@ export const Step6 = () => {
   return (
     <Fragment>
       <Stack height="100%" justifyContent="space-between">
+        <div />
         <FadeInUp
           containerStyle={{
             alignSelf: 'center',
@@ -22,6 +23,7 @@ export const Step6 = () => {
             <ProgressCircleRing cap="round" />
           </ProgressCircleRoot>
         </FadeInUp>
+        <div />
         <div />
       </Stack>
       <AbsoluteField>

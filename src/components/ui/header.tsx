@@ -1,12 +1,15 @@
 import { TextAnimation } from '@/components/animation/text-animation';
-import { useScenarioStore } from '@/lib/store/scenario-store';
 import { Box, Heading } from '@chakra-ui/react';
+import { useEffect, useState } from 'react';
 import { useSearchParams } from 'react-router';
 
 export const Header = () => {
-  const { scenario1 } = useScenarioStore();
   const [searchParams] = useSearchParams();
-  const step = searchParams.get('step') || '1';
+  const [step, setStep] = useState(searchParams.get('step') || '1');
+
+  useEffect(() => {
+    setStep(searchParams.get('step') || '1');
+  }, [searchParams]);
 
   const titles: Record<string, string> = {
     '1': '어떤 상황의 옷을 고르실건가요?',
@@ -28,12 +31,7 @@ export const Header = () => {
 
   return (
     <Box px={4}>
-      <TextAnimation>
-        {scenario1 && !['1', '2', '7'].includes(step) && (
-          <Heading size="xl" fontWeight="extrabold">
-            [{scenario1}]
-          </Heading>
-        )}
+      <TextAnimation key={step}>
         <Heading size="xl" fontWeight="extrabold" whiteSpace="pre-wrap">
           {title}
         </Heading>

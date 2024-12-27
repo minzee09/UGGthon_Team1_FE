@@ -1,5 +1,6 @@
 import { FadeInUp } from '@/components/animation/fade-in-up';
 import { AbsoluteField } from '@/components/ui/absolute-field';
+import { useScenarioStore } from '@/lib/store/scenario-store';
 import {
   Box,
   Button,
@@ -17,6 +18,7 @@ import { useNavigate } from 'react-router';
 import { Fragment } from 'react/jsx-runtime';
 
 export const Step5 = () => {
+  const { scenario5 } = useScenarioStore();
   const navigate = useNavigate();
   const handleMoveToGenerate = () => navigate('/generate?step=6');
 
@@ -32,6 +34,7 @@ export const Step5 = () => {
           bgColor="orange.500"
           width="full"
           fontWeight="semibold"
+          disabled={scenario5.length === 0}
           onClick={handleMoveToGenerate}
         >
           다음
@@ -42,6 +45,8 @@ export const Step5 = () => {
 };
 
 const FileUploadButton = () => {
+  // files to store
+  const { setScenario5 } = useScenarioStore();
   const [files, setFiles] = useState<Array<File>>([]);
 
   const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -51,6 +56,9 @@ const FileUploadButton = () => {
           !files.some((existingFile) => existingFile.name === file.name),
       );
       setFiles((prevFiles) => [...prevFiles, ...newFiles]);
+      // file 이름만
+      const fileNames = newFiles.map((file) => file.name);
+      setScenario5(fileNames);
     }
   };
 
@@ -61,6 +69,7 @@ const FileUploadButton = () => {
       return newFiles;
     });
   };
+
   return (
     <FileUploadRoot>
       <FileUploadTrigger asChild>

@@ -105,7 +105,7 @@ export const Step3ChipGroup: React.FC = () => {
   return (
     <Box p={4}>
       <VStack gap={6} align="stretch">
-        <Flex flexWrap="wrap" gap={2} justifyContent="space-evenly">
+        <Flex flexWrap="wrap" gap={2} justifyContent="start">
           {vibes.map((chip) => (
             <MiniChip
               key={chip.id}
