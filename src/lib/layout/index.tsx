@@ -18,7 +18,7 @@ export const Layout = ({ children }: LayoutProps) => {
     >
       <Meta />
       <Flex wrap="wrap" width="full">
-        <Box width="full" as="main" marginY={22}>
+        <Box width="full" as="main">
           {children}
         </Box>
       </Flex>
