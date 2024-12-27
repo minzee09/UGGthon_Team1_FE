@@ -110,7 +110,7 @@ const FileUploadButton = () => {
     <FileUploadRoot>
       <FileUploadTrigger asChild>
         <Button variant="outline" size="sm" as="label" disabled={isUploading}>
-          <HiUpload /> {isUploading ? 'Uploading...' : 'Upload files'}
+          <HiUpload /> {isUploading ? '업로드중...' : '파일 업로드'}
           <input
             type="file"
             multiple
