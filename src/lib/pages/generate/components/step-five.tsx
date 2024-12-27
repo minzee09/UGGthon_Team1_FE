@@ -1,7 +1,6 @@
 import { FadeInUp } from '@/components/animation/fade-in-up';
 import { AbsoluteField } from '@/components/ui/absolute-field';
 import { useImageStore } from '@/lib/store/image-store';
-import { useScenarioStore } from '@/lib/store/scenario-store';
 import {
   Box,
   Button,
@@ -22,7 +21,7 @@ const CLOUDINARY_URL = 'https://api.cloudinary.com/v1_1/djhsmwvsb/image/upload';
 const UPLOAD_PRESET = 'unsignedpreset'; // 설정한 Unsigned Upload Preset 이름
 
 export const Step5 = () => {
-  const { scenario5 } = useScenarioStore();
+  const { topImages } = useImageStore();
   const navigate = useNavigate();
   const handleMoveToGenerate = () => navigate('/generate?step=5-5');
 
@@ -38,7 +37,7 @@ export const Step5 = () => {
           bgColor="#DD6B20"
           width="full"
           fontWeight="semibold"
-          disabled={scenario5.length === 0}
+          disabled={topImages.length === 0}
           onClick={handleMoveToGenerate}
         >
           다음
