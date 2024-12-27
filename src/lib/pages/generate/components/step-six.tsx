@@ -15,6 +15,7 @@ export const Step6 = () => {
         <FadeInUp
           containerStyle={{
             alignSelf: 'center',
+            justifyContent: 'center',
           }}
         >
           <ProgressCircleRoot value={null}>

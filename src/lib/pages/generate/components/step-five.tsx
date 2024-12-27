@@ -62,7 +62,7 @@ const FileUploadButton = () => {
     });
   };
   return (
-    <FileUploadRoot marginTop={10}>
+    <FileUploadRoot>
       <FileUploadTrigger asChild>
         <Button variant="outline" size="sm" as="label">
           <HiUpload /> Upload files
@@ -75,7 +75,7 @@ const FileUploadButton = () => {
           />
         </Button>
       </FileUploadTrigger>
-      <Box marginTop={4}>
+      <Box marginTop={4} paddingBottom={20}>
         <SimpleGrid columns={2} gap={4}>
           {files.map((file, index) => (
             <Box
@@ -91,8 +91,8 @@ const FileUploadButton = () => {
                 src={URL.createObjectURL(file)}
                 alt={file.name}
                 objectFit="cover"
-                width="100%"
-                height="150px"
+                width="full"
+                height="170px"
               />
               <IconButton
                 aria-label="Remove file"
