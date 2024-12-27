@@ -1,5 +1,6 @@
 import { Box, type BoxProps } from '@chakra-ui/react';
 import type { PropsWithChildren } from 'react';
+import { FadeInUp } from '../animation/fade-in-up';
 
 export const AbsoluteField = ({
   children,
@@ -7,16 +8,15 @@ export const AbsoluteField = ({
 }: PropsWithChildren<BoxProps>) => {
   return (
     <Box
-      position="absolute"
+      position="fixed"
       bottom="0"
       left="0"
       width="100%"
-      bg="white"
       p={4}
       zIndex="100"
       {...props}
     >
-      {children}
+      <FadeInUp>{children}</FadeInUp>
     </Box>
   );
 };

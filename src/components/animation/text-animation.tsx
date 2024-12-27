@@ -24,7 +24,7 @@ export const TextAnimation: React.FC<PropsWithChildren<TextAnimationProps>> = ({
       opacity: 1,
       transition: {
         opacity: { duration: 0.8 },
-        delayChildren: 0.3,
+        delayChildren: 0.1,
       },
     },
   };
