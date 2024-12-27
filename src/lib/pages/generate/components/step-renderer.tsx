@@ -2,6 +2,7 @@ import { useSearchParams } from 'react-router';
 import Page404 from '../../404';
 import { Step1 } from './step-first';
 import { Step5 } from './step-five';
+import { Step55 } from './step-five-five';
 import { Step4 } from './step-fourth';
 import { Step2 } from './step-second';
 import { Step7 } from './step-seven';
@@ -23,6 +24,8 @@ export const StepRenderer: React.FC = () => {
       return <Step4 />;
     case '5':
       return <Step5 />;
+    case '5-5':
+      return <Step55 />;
     case '6':
       return <Step6 />;
     case '7':

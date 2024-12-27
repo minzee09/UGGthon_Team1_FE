@@ -17,10 +17,10 @@ import { HiOutlineTrash } from 'react-icons/hi2';
 import { useNavigate } from 'react-router';
 import { Fragment } from 'react/jsx-runtime';
 
-export const Step5 = () => {
+export const Step55 = () => {
   const { scenario5 } = useScenarioStore();
   const navigate = useNavigate();
-  const handleMoveToGenerate = () => navigate('/generate?step=5-5');
+  const handleMoveToGenerate = () => navigate('/generate?step=6');
 
   return (
     <Fragment>
