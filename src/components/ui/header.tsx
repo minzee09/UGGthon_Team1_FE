@@ -1,9 +1,11 @@
 import { TextAnimation } from '@/components/animation/text-animation';
+import { useScenarioStore } from '@/lib/store/scenario-store';
 import { Box, Heading } from '@chakra-ui/react';
 import { useEffect, useState } from 'react';
 import { useSearchParams } from 'react-router';
 
 export const Header = () => {
+  const { scenario1 } = useScenarioStore();
   const [searchParams] = useSearchParams();
   const [step, setStep] = useState(searchParams.get('step') || '1');
 
@@ -18,7 +20,7 @@ export const Header = () => {
     '4': '어떤 느낌이 가장 알맞나요?',
     '5': '알맞은 상의 사진을 업로드해주세요.',
     '5-5': '알맞은 하의 사진을 업로드해주세요.',
-    '6': '맞는 옷을 고르고 있어요!\n\n잠시만 기다려주세요.',
+    '6': `${scenario1}에 맞는 옷을 고르고 있어요!\n\n잠시만 기다려주세요.`,
     '7': '어울리는 조합을 추천할게요!',
   };
 

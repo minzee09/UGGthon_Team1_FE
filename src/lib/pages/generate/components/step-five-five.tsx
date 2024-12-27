@@ -1,6 +1,6 @@
 import { FadeInUp } from '@/components/animation/fade-in-up';
 import { AbsoluteField } from '@/components/ui/absolute-field';
-import { useScenarioStore } from '@/lib/store/scenario-store';
+import { useImageStore } from '@/lib/store/image-store';
 import {
   Box,
   Button,
@@ -17,8 +17,11 @@ import { HiOutlineTrash } from 'react-icons/hi2';
 import { useNavigate } from 'react-router';
 import { Fragment } from 'react/jsx-runtime';
 
+const CLOUDINARY_URL = 'https://api.cloudinary.com/v1_1/djhsmwvsb/image/upload';
+const UPLOAD_PRESET = 'unsignedpreset'; // 설정한 Unsigned Upload Preset 이름
+
 export const Step55 = () => {
-  const { scenario5 } = useScenarioStore();
+  const { bottomImages } = useImageStore();
   const navigate = useNavigate();
   const handleMoveToGenerate = () => navigate('/generate?step=6');
 
@@ -34,7 +37,7 @@ export const Step55 = () => {
           bgColor="#DD6B20"
           width="full"
           fontWeight="semibold"
-          disabled={scenario5.length === 0}
+          disabled={bottomImages.length === 0}
           onClick={handleMoveToGenerate}
         >
           다음
@@ -45,20 +48,49 @@ export const Step55 = () => {
 };
 
 const FileUploadButton = () => {
-  // files to store
-  const { setScenario5 } = useScenarioStore();
+  const { bottomImages, setBottomImages } = useImageStore();
   const [files, setFiles] = useState<Array<File>>([]);
+  const [isUploading, setIsUploading] = useState(false);
 
-  const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+  const handleFileChange = async (
+    event: React.ChangeEvent<HTMLInputElement>,
+  ) => {
     if (event.target.files) {
       const newFiles = Array.from(event.target.files).filter(
         (file) =>
           !files.some((existingFile) => existingFile.name === file.name),
       );
       setFiles((prevFiles) => [...prevFiles, ...newFiles]);
-      // file 이름만
-      const fileNames = newFiles.map((file) => file.name);
-      setScenario5(fileNames);
+
+      for (const file of newFiles) {
+        const formData = new FormData();
+        formData.append('file', file);
+        formData.append('upload_preset', UPLOAD_PRESET);
+
+        try {
+          setIsUploading(true);
+          const response = await fetch(CLOUDINARY_URL, {
+            method: 'POST',
+            body: formData,
+          });
+
+          if (!response.ok) {
+            throw new Error(`Cloudinary 업로드 실패: ${response.statusText}`);
+          }
+
+          const data = await response.json();
+          setBottomImages([data.secure_url]); // bottomImages 상태 업데이트
+        } catch (error) {
+          // biome-ignore lint/suspicious/noConsole: <explanation>
+          console.error(
+            `Cloudinary 업로드 중 오류 발생 (${file.name}):`,
+            error,
+          );
+          alert(`파일 업로드 실패: ${file.name}`);
+        } finally {
+          setIsUploading(false);
+        }
+      }
     }
   };
 
@@ -68,13 +100,17 @@ const FileUploadButton = () => {
       newFiles.splice(index, 1);
       return newFiles;
     });
+
+    const newImages = [...bottomImages];
+    newImages.splice(index, 1);
+    setBottomImages(newImages);
   };
 
   return (
     <FileUploadRoot>
       <FileUploadTrigger asChild>
-        <Button variant="outline" size="sm" as="label">
-          <HiUpload /> Upload files
+        <Button variant="outline" size="sm" as="label" disabled={isUploading}>
+          <HiUpload /> {isUploading ? 'Uploading...' : 'Upload files'}
           <input
             type="file"
             multiple
