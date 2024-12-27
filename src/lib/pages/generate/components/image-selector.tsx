@@ -1,7 +1,7 @@
 import { useScenarioStore } from '@/lib/store/scenario-store';
 import { Box, Grid, Image } from '@chakra-ui/react';
+import { Check } from 'lucide-react';
 import { useState } from 'react';
-import { FaCheck } from 'react-icons/fa';
 
 interface ImageData {
   id: number;
@@ -50,7 +50,7 @@ export const ImageSelector = () => {
   };
 
   return (
-    <Box p={4}>
+    <Box py={4}>
       <Grid templateColumns="repeat(2, 1fr)" gap={4} maxW="4xl" mx="auto">
         {currentImages.map((image) => (
           <Box
@@ -69,7 +69,7 @@ export const ImageSelector = () => {
               src={image.src}
               alt={image.alt}
               w="full"
-              h="200px"
+              h="160px"
               objectFit="cover"
             />
             <Box
@@ -82,7 +82,7 @@ export const ImageSelector = () => {
               opacity={selectedImage === image.id ? 1 : 0}
               transition="opacity 0.2s"
             >
-              <FaCheck color="white" size={40} />
+              <Check color="white" size={40} />
             </Box>
           </Box>
         ))}
