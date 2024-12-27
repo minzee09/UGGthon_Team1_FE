@@ -66,9 +66,9 @@ const MiniChip: React.FC<ChipProps> = ({ label, isSelected, onClick }) => {
       px="4"
       py="1"
       borderWidth="1px"
-      borderColor="orange.500"
-      color={isSelected ? 'white' : 'orange.500'}
-      bg={isSelected ? 'orange.500' : 'white'}
+      borderColor="#DD6B20"
+      color={isSelected ? 'white' : '#DD6B20'}
+      bg={isSelected ? '#DD6B20' : 'white'}
       _hover={{
         bg: isSelected ? 'orange.600' : 'orange.50',
       }}
@@ -103,7 +103,7 @@ export const Step3ChipGroup: React.FC = () => {
   };
 
   return (
-    <Box p={4}>
+    <Box>
       <VStack gap={6} align="stretch">
         <Flex flexWrap="wrap" gap={2} justifyContent="start">
           {vibes.map((chip) => (

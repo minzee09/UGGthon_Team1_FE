@@ -25,7 +25,7 @@ const Home = () => {
       </Stack>
       <AbsoluteField>
         <Button
-          bgColor="orange.500"
+          bgColor="#DD6B20"
           width="full"
           fontWeight="semibold"
           onClick={handleMoveToGenerate}

@@ -25,9 +25,9 @@ const Chip: React.FC<ChipProps> = ({ label, isSelected, onClick }) => {
       borderRadius="full"
       px="5"
       borderWidth="2px"
-      borderColor="orange.500"
-      color={isSelected ? 'white' : 'orange.500'}
-      bg={isSelected ? 'orange.500' : 'white'}
+      borderColor="#DD6B20"
+      color={isSelected ? 'white' : '#DD6B20'}
+      bg={isSelected ? '#DD6B20' : 'white'}
       _hover={{
         bg: isSelected ? 'orange.600' : 'orange.50',
       }}
@@ -56,7 +56,7 @@ export const Step1ChipGroup: React.FC = () => {
   };
 
   return (
-    <Box px={4}>
+    <Box>
       <Grid
         templateColumns="repeat(2, 1fr)"
         gap={4}
@@ -114,7 +114,7 @@ export const Step2ChipGroup: React.FC = () => {
   };
 
   return (
-    <Box p={4}>
+    <Box>
       <Grid
         templateColumns="repeat(2, 1fr)"
         gap={4}

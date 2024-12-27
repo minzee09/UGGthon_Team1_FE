@@ -20,7 +20,7 @@ export const Step2 = () => {
       </Stack>
       <AbsoluteField>
         <Button
-          bgColor="orange.500"
+          bgColor="#DD6B20"
           width="full"
           fontWeight="semibold"
           disabled={scenario2.length === 0}

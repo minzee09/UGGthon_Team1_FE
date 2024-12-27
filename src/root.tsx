@@ -7,16 +7,18 @@ import { Layout as AppLayout } from '@/lib/layout';
 // fonts
 import '@fontsource-variable/plus-jakarta-sans';
 
-export function Layout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export function Layout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="ko">
       <head>
         <meta charSet="UTF-8" />
         <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+        <link
+          rel="stylesheet"
+          as="style"
+          crossOrigin="anonymous"
+          href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css"
+        />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>vite-react-chakra-starter</title>
         <Meta />
