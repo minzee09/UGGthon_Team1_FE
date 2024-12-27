@@ -45,9 +45,6 @@
   "devDependencies": {
     "@biomejs/biome": "1.9.4",
     "@chakra-ui/cli": "^3.2.2",
-    "@commitlint/cli": "^19.6.0",
-    "@commitlint/config-conventional": "^19.6.0",
-    "@commitlint/types": "^19.5.0",
     "@react-router/dev": "^7.0.2",
     "@types/node": "^22.10.1",
     "@types/react": "18.3.12",

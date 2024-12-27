@@ -13,7 +13,7 @@ export function Layout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="ko">
       <head>
         <meta charSet="UTF-8" />
         <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
@@ -22,7 +22,7 @@ export function Layout({
         <Meta />
         <Links />
       </head>
-      <body>
+      <body style={{ margin: 0, padding: 0, height: '100%' }}>
         <HelmetProvider>
           <Provider>
             <AppLayout>{children}</AppLayout>
