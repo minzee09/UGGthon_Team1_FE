@@ -1,38 +1,14 @@
-<img src="https://og.sznm.dev/api/generate?heading=vite-react-chakra-starter&text=React+vite+template+with+Chakra-UI+and+TypeScript+setup.&template=color&center=true&height=330" />
-
-This is a project bootstrapped with [`@vitejs/app`](https://vitejs.dev/guide/#scaffolding-your-first-vite-project) (`react-ts`), added with [Chakra UI](https://chakra-ui.com) and [TypeScript](https://www.typescriptlang.org) setup.
-
-- ⚡ blazing fast dev server and build
-- 🔗 route management added (`react-router` v7 - Framework configuration)
-
-[**Live Demo**](https://vite-react-chakra-starter.sznm.dev/)
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/import/git?s=https://github.com/agustinusnathaniel/vite-react-chakra-starter) [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/agustinusnathaniel/vite-react-chakra-starter)
-
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/agustinusnathaniel/vite-react-chakra-starter)
-
-## Getting Started
-
-You can either click [`Use this template`](https://github.com/agustinusnathaniel/vite-react-chakra-starter/generate) button on this repository and clone the repo or use npx degit like so:
-
-```bash
-npx degit agustinusnathaniel/vite-react-chakra-starter <app_name>
-```
-
-Then, run the development server:
-
-```bash
-pnpm dev
-```
-
-## Deployment
-
-- build command: `pnpm build`
-- output directory: `build/client`
-
-## References
-
-- [vite](https://vitejs.dev)
-  - [avoid manual import](https://vitejs.dev/guide/features.html#jsx)
-- [Chakra UI](https://chakra-ui.com/)
-- [TypeScript](https://www.typescriptlang.org)
+<a href="https://ibb.co/dtcLcr8"><img src="https://i.ibb.co/ypRYRXH/1.png" alt="1" border="0"></a>
+<a href="https://ibb.co/542G4MW"><img src="https://i.ibb.co/GpFnpxv/2.png" alt="2" border="0"></a>
+<a href="https://ibb.co/JmcVfFS"><img src="https://i.ibb.co/4KFz6g0/3.png" alt="3" border="0"></a>
+<a href="https://ibb.co/xYMV55h"><img src="https://i.ibb.co/PM5BCCx/4.png" alt="4" border="0"></a>
+<a href="https://ibb.co/FWdZ2zy"><img src="https://i.ibb.co/BPYWbBQ/5.png" alt="5" border="0"></a>
+<a href="https://ibb.co/c2zPDzM"><img src="https://i.ibb.co/9yRJsRz/6.png" alt="6" border="0"></a>
+<a href="https://ibb.co/Tr6dCY4"><img src="https://i.ibb.co/x3Wd4X1/7.png" alt="7" border="0"></a>
+<a href="https://ibb.co/cyhPRmJ"><img src="https://i.ibb.co/WHvQ7Tn/8.png" alt="8" border="0"></a>
+<a href="https://ibb.co/MBPRfSq"><img src="https://i.ibb.co/3RS0vdt/9.png" alt="9" border="0"></a>
+<a href="https://ibb.co/prQPYMh"><img src="https://i.ibb.co/n8B0xYP/10.png" alt="10" border="0"></a>
+<a href="https://ibb.co/bF70z6t"><img src="https://i.ibb.co/tz3G8HR/11.png" alt="11" border="0"></a>
+<a href="https://ibb.co/ySVWwbv"><img src="https://i.ibb.co/QdXr21S/12.png" alt="12" border="0"></a>
+<a href="https://ibb.co/CQGZ39m"><img src="https://i.ibb.co/pdF8BKb/13.png" alt="13" border="0"></a>
+<a href="https://ibb.co/7Vxnx8Q"><img src="https://i.ibb.co/S0DtDWc/14.png" alt="14" border="0"></a>
